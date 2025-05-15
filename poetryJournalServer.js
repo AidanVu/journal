@@ -1,9 +1,25 @@
 const express = require("express");
+require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+// process.stdin.setEncoding("utf8");
+// process.stdin.on('readable', () => {
+//     const dataInput = process.stdin.read();
+//     if (dataInput !== null) {
+//         const command = dataInput.trim();
+//         if (command === 'stop') {
+//             console.log("Shutting down the server...");
+//             client.close();
+//             process.exit(0);
+//         } else {
+//             console.log(`Invalid command: ${command}`);
+//             process.stdout.write("Stop to shutdown the server: ");
+//         }
+//     }
+// });
 
 let client;
 let collection;
@@ -123,4 +139,6 @@ app.use('/', router);
 
 app.listen(PORT, async () => {
     await connectToDatabase();
+    console.log(`Web server started and running at http://localhost:${PORT}`);
+    process.stdout.write("Stop to shutdown the server: ");
 });
