@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Poem Creation</title>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        function confirmSubmission(event) {
+            if (!confirm("Are you sure you want to submit this poem?")) {
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+
+<body>
+	<h1>Poem</h1>
+    <form method="POST" action="/create" onsubmit=confirmSubmission(event)>
+        <fieldset>
+            <label><strong>Author: </strong><input type="text" name="author" value="Anonymous" required></label>
+            <label><strong>Title: </strong><input type="text" name="title" required></label>
+            <br>
+            <br>
+            <textarea name="poem" rows=20 cols=100 required></textarea>
+        </fieldset>
+        <br>
+        <button type="reset">Reset</button>
+        <button type="submit">Publish Poem</button>
+    </form>
+    <hr>
+    <a href="/">HOME</a>
+    <br>
+    <br>
+    <form action="javascript:RhymeBrainSubmit()">
+        <label>Get Rhymes: </label>
+        <input type=text id="RhymeBrainInput">
+        <input type=submit value="Rhyme">
+    </form>
+    <script type="text/javascript">
+        var RhymeBrainMaxResults = 50;
+    </script>
+    <script type="text/javascript" src="https://rhymebrain.com/external.js"></script>
+    Rhyme results are provided by <a href="https://rhymebrain.com">RhymeBrain.com</a>
+
+
+</body>
+
+</html>

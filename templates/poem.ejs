@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Poem Reader</title>
+</head>
+
+<body>
+    <h1><%- title %></h1>
+    <h3>by: <%- author %></h3>
+    <pre><%- poem %></pre>
+	<hr>
+    <form action="/delete/<%= id %>" method="post" style="display: inline;">
+        <button type="submit">Delete</button>
+    </form>
+    <form action="/edit/<%= id %>" method="get" style="display: inline;">
+        <button type="submit">Edit</button>
+    </form>
+    <br>
+    <br>
+    <a href="/">HOME</a>
+</body>
+</html>

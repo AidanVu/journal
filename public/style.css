@@ -1,0 +1,16 @@
+
+body {
+  background-color: wheat;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Esteban", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+h3 {
+  color: brown ;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Poetry Journal</title>
+</head>
+
+<body>
+  <h1>Journal</h1>
+  <a href="/create">Create a New Poem</a>
+  <br>
+  <hr>
+    <% poems.forEach(poem => { %>
+        <a href="/read/<%= poem._id %>"><%= poem.title %></a><br>
+    <% }) %>
+</body>
+</html>
