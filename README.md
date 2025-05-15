@@ -4,7 +4,7 @@
 
 **App Description** Allows users to create, edit, and delete poems that are all collected in a Journal
 
-**Youtube Video Link:**
+**Youtube Video Link:** (https://www.youtube.com/watch?v=rcIeXWrJ-00)
 
 **APIs:** RhymeBrain (https://rhymebrain.com/api.html)
 
