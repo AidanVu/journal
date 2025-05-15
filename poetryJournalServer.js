@@ -1,5 +1,5 @@
 const express = require("express");
-require("dotenv").config();
+// require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 const PORT = process.argv[2];
